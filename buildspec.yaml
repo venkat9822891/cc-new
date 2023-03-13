@@ -14,8 +14,8 @@ phases:
     commands:
       - env
       - ls
-      - aws s3 cp s3://$BUILD_BUCKET/build.py build.py --quiet
-      - aws s3 cp bankTest s3://$BUILD_BUCKET/$CODEBUILD_START_TIME --recursive --acl bucket-owner-full-control --quiet
+      - aws s3 cp s3://myvenkat-bucket/build.py build.py --quiet
+      - aws s3 cp bankTest s3://myvenkat-bucket/$CODEBUILD_START_TIME --recursive --acl bucket-owner-full-control --quiet
   build:
     commands:
       - python build.py
